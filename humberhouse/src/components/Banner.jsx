@@ -12,7 +12,7 @@ const Banner = () => {
       <div className='BannerFiller'></div>
       <div className='Headline'>
         <h2>Time to get away.</h2>
-        <Link>
+        <Link to={"/tour"} className='BannerBtn'>
         Virtual Tour
         </Link>
       </div>
