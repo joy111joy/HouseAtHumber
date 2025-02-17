@@ -11,6 +11,7 @@ import QueenBed from '../assets/icons/QueenBed.svg';
 import Shower from '../assets/icons/Shower.svg';
 import Bath from '../assets/icons/Bath.svg';
 import Toilet from '../assets/icons/Toilet.svg';
+import MenuIcon from '../assets/icons/Menu.png';
 
 import BedNTwin1 from '../assets/imgs/tour/BedNTwin1.jpg';
 import BedNTwin2 from '../assets/imgs/tour/BedNTwin2.jpg';
@@ -51,6 +52,16 @@ const Tour = () => {
   // Single state variable to sync both dropdowns
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
+
+  const faqs = [
+    {question: "How close is the golf course?", answer: "The River golf course is a 2 minute walk from the rental!."},
+    {question: "Is there wifi included?", answer: "Yes, wifi is included."},
+    {question: "Are there Tv's in the house?", answer: "Yes, there are Tv's in almost every room."},
+    {question: "Is the rental kid friendly?", answer: "Yes, the rental is kid friendly. We have some toys and chidren's utensils."},
+    {question: "How close is the nearest grocery store?", answer: "The nearest grocery store is a 10 minute drive away."},
+    {question: "How close is the ski hill?", answer: "Marble Mountain ski resort is right outside of Humber Valley Resort."},
+  ];
+
   const imageArray = [
     { src: Entrance1, subtext: "Entrance" },
     { src: Entrance2, subtext: "Entrance" },
@@ -77,6 +88,12 @@ const Tour = () => {
     { src: TwoTwins2, subtext: "Bedroom with Two Twins" },
     { src: Office1, subtext: "Office" },
   ];
+
+  const [openFAQ, setOpenFAQ] = useState(null);
+
+  const toggleFAQ = (index) => {
+    setOpenFAQ(openFAQ === index ? null : index);
+  };
 
   // Toggle function will open/close both sections together
   const toggleDropdowns = () => {
@@ -279,10 +296,30 @@ const Tour = () => {
             )}
           </div>
 
+        </div>
 
-
-
-
+        <div className='FAQSection'>
+        <h3>Frequently Asked Questions</h3>
+        <div className='FAQList'>
+        {faqs.map((faq, index) => (
+            <div key={index} className='FAQItem'                 onClick={() => toggleFAQ(index)}
+>
+              <div 
+                className='FAQQuestion' 
+                style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}
+              >
+                <img src={MenuIcon} alt="" />
+                <span className='Question'>{faq.question}</span>
+              </div>
+              {openFAQ === index && (
+                <div className='FAQAnswer'>
+                  <p> - {faq.answer}</p>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
 
           {/* FAQ */}
           {/* Div with drop downs of each question. Each question has a 3 line menu icon */}
@@ -306,7 +343,6 @@ const Tour = () => {
           
 
 
-        </div>
       </div>
     </div>
   );

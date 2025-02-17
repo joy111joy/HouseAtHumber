@@ -1105,6 +1105,72 @@ height: 45%;
 }
 
 
+.FAQSection {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  font-family: "Albert Sans", sans-serif;
+  margin-bottom: 100px;
+
+}
+.FAQList {
+  width: 100%;
+  
+}
+
+.FAQSection h3{
+  align-self: center;
+  font-size: 2rem;
+  margin-bottom: 75px;
+}
+
+.FAQAnswer {
+  align-self: center;
+  font-size: 1.25rem;
+  margin-top: 50px;
+  width: 80%;
+}
+
+.FAQItem {
+  width: 100% !important;
+  background-color: #e5e5e5;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  cursor: pointer;
+
+  color: #000000;
+  transition: background-color 0.6s;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+}
+
+.FAQItem img {
+  width: 50px;
+  height: 50px;
+  margin-left: 50px;
+}
+
+.Question {
+  padding-left: 50px;
+  font-size: 1.25rem;
+  
+}
+
+
+.FAQItem:hover {
+  background-color: #11823c;
+  color: white;
+
+}
+
+.openFAQ {
+  background-color: #11823c;
+  color: rgb(255, 0, 0); 
+}
 
 
 
@@ -1112,9 +1178,35 @@ height: 45%;
 
 
 
+@media screen and (max-width: 500px) {
+  .FAQItem img {
+    width: 40px;
+    height: 40px;
+    margin-left: 40px;
+  }
 
+  .Question {
+    padding-left: 40px;
+    font-size: 1rem;
+  }
 
+  .FAQAnswer {
+    font-size: 1rem;
+  }
 
+  .FAQSection h3{
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+  }
+
+  .FAQItem {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-right: 20px;
+    margin-left: -10px;
+    
+  }
+}
 
 
 
@@ -1273,7 +1365,6 @@ height: 45%;
 @media screen and (max-width: 800px) {
   .Calendar {
     width: 90%;
-    height: 600px;
     padding-bottom: 140px;
   }
 
@@ -1293,8 +1384,6 @@ height: 45%;
 @media screen and (max-width: 700px) {
   .Calendar {
     width: 95%;
-    height: 400px;
-    padding-bottom: 450px;
   }
   .fc-daygrid-day,
 .fc-daygrid-day-frame {
@@ -1380,7 +1469,6 @@ height: 45%;
 
 @media screen and (max-width: 400px) {
 .Calendar {
-  padding-bottom: 490px;
 }
 
 .ColorSquare {
@@ -1507,3 +1595,52 @@ height: 45%;
     font-size: 1.5rem;
   }
 
+
+
+  .Login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-family: "Albert Sans", sans-serif;
+    font-size: 2rem;
+    color: white;
+    height: 100vh;
+  }
+
+  .Login form {
+    background-color: #3f925b;
+    padding: 50px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px
+  }
+
+  .Login input {
+    width: 350px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  .Login button {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
+    font-family: "Albert Sans", sans-serif;
+    padding: 10px 20px;
+    border-radius: 30px;
+  }
+
+  .logout-btn {
+    background-color: #e36b01;
+    color: white;
+    font-size: 1.5rem;
+    font-family: "Albert Sans", sans-serif;
+    padding: 10px 20px;
+    border-radius: 30px;
+  }
