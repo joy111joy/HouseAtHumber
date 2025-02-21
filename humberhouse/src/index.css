@@ -51,7 +51,7 @@ body {
 
 
 .Banner {
-  background-image: url("./assets/imgs/Banner.png"); /* Use the actual path */
+  background-image: url("./assets/imgs/Banner2.png"); /* Use the actual path */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center 0px;
@@ -63,9 +63,7 @@ body {
   /* animation: zoomInBackground 10s ease-in-out infinite alternate; */
 } 
 
-.Home {
-  /* margin-top: -100px; */
-}
+
 
 .Headline {
   display: flex;
@@ -73,10 +71,13 @@ body {
   justify-content: center;
   align-items: center;
   background: rgb(54,54,54);
-  background: radial-gradient(circle, rgb(50, 50, 50) 0%, rgba(0,0,0,0) 32%);
-  margin-top: 500px;
+  background: radial-gradient(ellipse at center, rgb(50, 50, 50) 0%, rgba(0,0,0,0) 52%);
+  background-size: 300% 55%; /* Stretches it horizontally */
+  background-position: center 100px;
+    margin-top: 500px;
   width: 100%;
   height: 600px;
+  background-repeat: no-repeat;
 
 
 }
@@ -1337,6 +1338,12 @@ height: 45%;
   background: none !important;
 }
 
+.fc-col-header {
+  position: relative;
+  z-index: 10; /* Bring labels to the front */
+  background-color: #172F1F; /* Ensure it's visible */
+}
+
 
 .fc .fc-daygrid-day.fc-day-today {
   background-color: #e36b01 !important;
@@ -1465,11 +1472,12 @@ height: 45%;
   .fc h2 {
     font-size: .5rem;  
   }
+
+
 }
 
 @media screen and (max-width: 400px) {
-.Calendar {
-}
+
 
 .ColorSquare {
   width: 20px;

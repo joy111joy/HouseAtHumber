@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from "react-helmet-async";
 import TourImg from '../components/TourImg';
 import PetImg from '../assets/icons/Pets.svg';
 import WasherImg from '../assets/icons/Washer.svg';
@@ -102,6 +103,13 @@ const Tour = () => {
 
   return (
     <div className='TourPage'>
+            <Helmet>
+        <title>House at Humber | Tour</title>
+        <meta 
+          name="description" 
+          content="Explore a cozy vacation rental with comfortable bedrooms, modern amenities, and a welcoming atmosphere. Perfect for a relaxing getaway with pet-friendly options, parking, and more!" 
+        />
+      </Helmet>
       <div className='Tour'>
         <div className='TourTitle'>
           <Link to='/'>&lt; Back</Link>

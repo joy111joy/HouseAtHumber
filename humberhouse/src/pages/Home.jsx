@@ -1,11 +1,18 @@
 import React from 'react';
 import Banner from '../components/Banner';
 import ImgChange from '../components/ImgChange';
+import { Helmet } from "react-helmet-async";
 
 
 const Home = () => {
   return (
     <div className='Home'>
+      <Helmet>
+        <title>House At Humber | Home</title>
+        <meta 
+          name="description" 
+          content="Experience a relaxing getaway at House at Humber, nestled in the stunning Humber Valley Resort, Corner Brook. Enjoy nearby attractions like Marble Mountain ski resort and The River golf course for the perfect blend of adventure and tranquility. Book your stay today!" />      
+      </Helmet>
       <Banner />
       <div className='GradBox'></div>
 

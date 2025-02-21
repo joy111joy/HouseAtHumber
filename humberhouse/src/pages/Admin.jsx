@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { auth } from '../services/firebase'; 
-import Calendar from '../components/Calendar';
+import CalendarAdmin from '../components/CalendarAdmin';
 import { signOut } from "firebase/auth";
 
 const Book = () => {
@@ -51,7 +51,7 @@ const Book = () => {
       </div>
       
       {/* Calendar Component */}
-      <Calendar />
+      <CalendarAdmin />
 
 
     </div>
