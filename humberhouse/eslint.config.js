@@ -40,12 +40,12 @@ export default [
     },
   },
   {
-    // Add configuration for Node.js if needed (for functions folder)
+    // Configuration for Firebase Functions (Node.js)
     files: ['functions/**/*.{js,jsx}'],
     languageOptions: {
       ecmaVersion: 2020,
       globals: {
-        ...globals.node,
+        ...globals.node,  // Ensures Node.js-specific globals are available
         module: 'readonly',
         require: 'readonly',
       },
@@ -55,7 +55,8 @@ export default [
       },
     },
     rules: {
-      // Optional additional rules for Node.js-specific code
+      // Disable the "no-unused-vars" rule for Firebase Functions (or customize it)
+      'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }], // Ignore unused vars starting with '_'
     },
   },
 ]
